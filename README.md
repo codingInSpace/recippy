@@ -14,7 +14,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 ## DB configuration
 Install postgres, run the following as the postgres user:
-´´´sql
+```sql
 # psql
 CREATE DATABASE recippy\_dev;
 CREATE DATABASE recippy\_test;
@@ -23,7 +23,7 @@ ALTER DATABASE recippy\_dev OWNER TO recippy;
 ALTER DATABASE recippy\_test OWNER TO recippy;
 GRANT ALL PRIVILEGES ON DATABASE recippy\_dev TO recippy;
 GRANT ALL PRIVILEGES ON DATABASE recippy\_test TO recippy;
-´´´
+```
 
 ## Learn more
 
