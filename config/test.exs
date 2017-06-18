@@ -12,8 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :recippy, Recippy.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "recippy",
+  password: "hacking-nasa123",
   database: "recippy_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

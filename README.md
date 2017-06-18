@@ -1,6 +1,8 @@
 # Recippy
+Recipe management app
 
-To start your Phoenix app:
+## Install and setup
+To start the app:
 
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
@@ -9,20 +11,25 @@ To start your Phoenix app:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
 
-## DB setup
-´´´bash
+## DB configuration
+Install postgres, run the following as the postgres user:
+´´´sql
 # psql
 CREATE DATABASE recippy\_dev;
+CREATE DATABASE recippy\_test;
 CREATE USER recippy WITH PASSWORD 'hacking-nasa123';
 ALTER DATABASE recippy\_dev OWNER TO recippy;
-
+ALTER DATABASE recippy\_test OWNER TO recippy;
+GRANT ALL PRIVILEGES ON DATABASE recippy\_dev TO recippy;
+GRANT ALL PRIVILEGES ON DATABASE recippy\_test TO recippy;
 ´´´
+
 ## Learn more
 
   * Official website: http://www.phoenixframework.org/
   * Guides: http://phoenixframework.org/docs/overview
   * Docs: https://hexdocs.pm/phoenix
   * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+  * Source: https://github.com/phoenixframework/phoenix  
+Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
