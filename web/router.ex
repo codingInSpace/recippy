@@ -11,7 +11,6 @@ defmodule Recippy.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
-    resources "/recipes", RecipeController, except: [:new, :edit]
   end
 
   scope "/", Recippy do
@@ -21,7 +20,8 @@ defmodule Recippy.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", Recippy do
-  #   pipe_through :api
-  # end
+  scope "/api", Recippy do
+    pipe_through :api
+    resources "/recipes", RecipeController, except: [:new, :edit]
+  end
 end
