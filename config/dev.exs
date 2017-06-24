@@ -37,8 +37,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :recippy, Recippy.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "recippy",
-  password: "hacking-nasa123",
   database: "recippy_dev",
   hostname: "localhost",
   pool_size: 10
+
+  import_config "dev.secret.exs"
